@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.drinkbeverageinfosystem.controller.DrinkController">
+  <children>
+    <TabPane prefHeight="535.0" prefWidth="727.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Drinks">
+          <content>
+            <AnchorPane prefHeight="371.0" prefWidth="594.0">
+              <children>
+                <Button fx:id="addDrink" layoutX="42.0" layoutY="370.0" mnemonicParsing="false" onAction="#addDrink" text="Add Drink" />
+                <Button fx:id="deleteDrink" layoutX="201.0" layoutY="370.0" mnemonicParsing="false" onAction="#deleteDrink" text="Delete Drink" />
+                <Button fx:id="resetDrinks" layoutX="471.0" layoutY="440.0" mnemonicParsing="false" onAction="#resetDrinks" text="Reset Drinks" />
+                <TextField fx:id="drinkName" layoutX="62.0" layoutY="71.0" prefHeight="38.0" prefWidth="202.0" promptText="Drink Name" />
+                <TextField fx:id="countryOrigin" layoutX="62.0" layoutY="140.0" prefHeight="39.0" prefWidth="201.0" promptText="Country of Origin" />
+                <ListView fx:id="drinkList" layoutX="354.0" layoutY="39.0" prefHeight="390.0" prefWidth="317.0" />
+                <TextArea fx:id="drinkDescription" layoutX="42.0" layoutY="218.0" prefHeight="141.0" prefWidth="241.0" promptText="Description of Drink" />
+                        <Label fx:id="listDrinkLabel" layoutX="356.0" layoutY="21.0" text="List of Drinks:" />
+              </children>
+            </AnchorPane>
+          </content></Tab>
+        <Tab text="Ingredients">
+          <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+              <children>
+                <Button fx:id="addIngredient" layoutX="89.0" layoutY="367.0" mnemonicParsing="false" onAction="#addIngredient" prefHeight="26.0" prefWidth="123.0" text="Add Ingredient" />
+                <Button fx:id="deleteIngredient" layoutX="88.0" layoutY="417.0" mnemonicParsing="false" onAction="#deleteIngredient" prefHeight="27.0" prefWidth="124.0" text="Delete Ingredient" />
+                        <Button fx:id="resetIngredients" layoutX="449.0" layoutY="430.0" mnemonicParsing="false" onAction="#resetIngredients" text="Reset Ingredients" />
+                <TextField fx:id="ingredientName" layoutX="61.0" layoutY="42.0" prefHeight="41.0" prefWidth="178.0" promptText="Name" />
+                <TextField fx:id="alcoholContent" layoutX="62.0" layoutY="124.0" prefHeight="45.0" prefWidth="176.0" promptText="Alcohol Content" />
+                <TextArea fx:id="ingredientDescription" layoutX="50.0" layoutY="197.0" prefHeight="154.0" prefWidth="200.0" promptText="Description of Ingredient" />
+                <ListView fx:id="ingredientList" layoutX="351.0" layoutY="42.0" prefHeight="364.0" prefWidth="305.0" />
+                        <Label fx:id="listIngredientLabel" layoutX="350.0" layoutY="25.0" text="List of Ingredients:" />
+              </children>
+            </AnchorPane>
+          </content></Tab>
+        <Tab text="Recipes">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="449.0" prefWidth="600.0">
+              <children>
+                <Button fx:id="addRecipe" layoutX="442.0" layoutY="16.0" onAction="#addRecipe" prefHeight="26.0" prefWidth="199.0" text="Add Recipe" />
+                <Button fx:id="addIngredientRecipe" layoutX="296.0" layoutY="260.0" onAction="#addIngredientRecipe" text="Add Ingredient" />
+                <Button fx:id="addDrinkRecipe" layoutX="296.0" layoutY="107.0" onAction="#addDrinkRecipe" prefHeight="25.0" prefWidth="96.0" text="Add Drink" />
+                <Button fx:id="deleteRecipe" layoutX="410.0" layoutY="458.0" onAction="#deleteRecipe" text="Delete Recipe" />
+                        <Button fx:id="resetRecipes" layoutX="601.0" layoutY="458.0" mnemonicParsing="false" onAction="#resetRecipes" text="Reset Recipes" />
+                <Button fx:id="resetSelectedItems" layoutX="479.0" layoutY="306.0" onAction="#resetSelectedItems" text="Reset Selected Items" />
+                <TextField fx:id="recipeName" layoutX="120.0" layoutY="16.0" prefWidth="300.0" promptText="Enter recipe name" />
+                <TextArea fx:id="instructionsArea" layoutX="20.0" layoutY="367.0" prefHeight="100.0" prefWidth="300.0" promptText="Enter Recipe Instructions" />
+                <ListView fx:id="availableIngredientList" layoutX="17.0" layoutY="213.0" prefHeight="118.0" prefWidth="274.0" />
+                <ListView fx:id="availableDrinksList" layoutX="20.0" layoutY="69.0" prefHeight="109.0" prefWidth="270.0" />
+                <ListView fx:id="selectedDrink" layoutX="408.0" layoutY="69.0" prefHeight="41.0" prefWidth="270.0" />
+                <ListView fx:id="selectedIngredients" layoutX="409.0" layoutY="142.0" prefHeight="156.0" prefWidth="270.0" />
+                <ListView fx:id="savedRecipesList" layoutX="409.0" layoutY="357.0" prefHeight="97.0" prefWidth="281.0" />
+                <Label fx:id="ingredientsLabel" layoutX="20.0" layoutY="195.0" text="Ingredients:" />
+                <Label fx:id="drinksLabel" layoutX="20.0" layoutY="52.0" text="Drinks:" />
+                <Label fx:id="selectedDrinkLabel" layoutX="409.0" layoutY="52.0" text="Selected Drink:" />
+                <Label fx:id="instructionsLabel" layoutX="19.0" layoutY="349.0" text="Instructions:" />
+                <Label fx:id="recipeNameLabel" layoutX="20.0" layoutY="20.0" text="Recipe Name:" />
+                <Label fx:id="savedRecipeLabel" layoutX="410.0" layoutY="341.0" text="Saved Recipes:" />
+                        <Label fx:id="selectedIngredientLabel" layoutX="408.0" layoutY="124.0" text="Selected Ingredients:" />
+              </children></AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Search">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="searchDrink" layoutX="495.0" layoutY="15.0" mnemonicParsing="false" onAction="#searchDrink" prefHeight="38.0" prefWidth="147.0" text="Search Drinks" />
+                        <Button fx:id="searchRecipes" layoutX="495.0" layoutY="349.0" mnemonicParsing="false" onAction="#searchRecipes" prefHeight="38.0" prefWidth="147.0" text="Search Recipes" />
+                        <Button fx:id="searchIngredients" layoutX="495.0" layoutY="185.0" mnemonicParsing="false" onAction="#searchIngredients" prefHeight="38.0" prefWidth="147.0" text="Search Ingredients" />
+                        <TextField fx:id="drinkSearchBar" layoutX="14.0" layoutY="14.0" prefHeight="39.0" prefWidth="452.0" promptText="Search Drinks" />
+                        <TextField fx:id="recipeSearchBar" layoutX="16.0" layoutY="348.0" prefHeight="39.0" prefWidth="449.0" promptText="Search Recipes" />
+                        <TextField fx:id="ingredientSearchBar" layoutX="14.0" layoutY="184.0" prefHeight="39.0" prefWidth="451.0" promptText="Search Ingredients" />
+                        <ListView fx:id="drinkSearchResults" layoutX="16.0" layoutY="66.0" prefHeight="97.0" prefWidth="451.0" />
+                        <ListView fx:id="recipeSearchResults" layoutX="16.0" layoutY="395.0" prefHeight="97.0" prefWidth="451.0" />
+                        <ListView fx:id="ingredientsSearchResults" layoutX="14.0" layoutY="237.0" prefHeight="97.0" prefWidth="451.0" />
+                     </children></AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
